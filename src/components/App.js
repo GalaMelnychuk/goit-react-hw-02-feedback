@@ -22,8 +22,10 @@ class App extends Component {
 
   handlerFeedbackCount = event => {
     const buttonName = event.target.name;
-    this.setState({
-      [buttonName]: this.state[buttonName] + 1
+    this.setState(state => {
+      return {
+        [buttonName]: state[buttonName] + 1
+      };
     });
   };
 
